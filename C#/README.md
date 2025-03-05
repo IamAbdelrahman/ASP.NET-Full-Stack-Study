@@ -8,7 +8,6 @@ Welcome to my C# Study repository! This repository contains all the code I write
 CSharp-Study/
 │── Examples/          # Basic concepts, syntax, and small programs
 │── Labs-Trainings/    # More structured exercises and projects from courses
-│── Problem-Solving/   # Solutions from HackerRank, LeetCode, etc.
 │── README.md          # This file
 ```
 
@@ -22,12 +21,6 @@ This section contains small C# programs and examples demonstrating various langu
 ### 🔹 Labs-Trainings/
 This section includes more structured labs and exercises from courses and training programs.
 - **CourseWork** – Code from structured learning courses.
-
-### 🔹 Problem-Solving/
-This section contains solutions to algorithmic problems from coding platforms.
-- **LeetCode** – Solutions categorized by difficulty.
-- **HackerRank** – Various problem solutions.
-
 
 ## 📌 Contributing
 This repository is for my personal learning, but feel free to suggest improvements or discuss C# concepts!
