@@ -1,0 +1,31 @@
+﻿<h1> Welcome to the ITI Tanta </h1>
+<h2 id="AK">My name is Ak</h2>
+<style>
+    #AK{
+        background-color: red;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+        border: 1px solid black;
+    }
+</style>
+
+<script> alert("Hello AK!"); </script>
+
+@{
+    int x = 5;
+    int y = 10;
+    if (x > y)
+    {
+        <h3>@x is greater than @y</h3>
+    }
+    else
+    {
+        <h3>@x is less than @y</h3>
+    }
+}
+
+@for (int i = 0; i < 10; i++)
+{
+    int j = i + 1;
+    <li>@j : @i</li>
+}

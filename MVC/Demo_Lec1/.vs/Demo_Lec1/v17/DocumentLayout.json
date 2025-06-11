@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|c:\\work\\dotnet\\mvc\\demo\\demo_lec1\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|c:\\work\\dotnet\\mvc\\demo\\demo_lec1\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|c:\\work\\dotnet\\mvc\\demo\\demo_lec1\\models\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|solutionrelative:models\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|c:\\work\\dotnet\\mvc\\demo\\demo_lec1\\views\\product\\productdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|solutionrelative:views\\product\\productdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|c:\\work\\dotnet\\mvc\\demo\\demo_lec1\\views\\product\\showallproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|solutionrelative:views\\product\\showallproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|c:\\work\\dotnet\\mvc\\demo\\demo_lec1\\demo_lec1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|solutionrelative:demo_lec1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|c:\\work\\dotnet\\mvc\\demo\\demo_lec1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B4EA4E-A849-4E69-8E55-E81F8D59CACA}|Demo_Lec1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T19:35:39.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductRepo.cs",
+              "DocumentMoniker": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Models\\ProductRepo.cs",
+              "RelativeDocumentMoniker": "Models\\ProductRepo.cs",
+              "ToolTip": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Models\\ProductRepo.cs",
+              "RelativeToolTip": "Models\\ProductRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T19:39:31.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAA8wFAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T17:42:58.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShowAllProducts.cshtml",
+              "DocumentMoniker": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Views\\Product\\ShowAllProducts.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\ShowAllProducts.cshtml",
+              "ToolTip": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Views\\Product\\ShowAllProducts.cshtml",
+              "RelativeToolTip": "Views\\Product\\ShowAllProducts.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T21:27:39.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductDetails.cshtml",
+              "DocumentMoniker": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Views\\Product\\ProductDetails.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\ProductDetails.cshtml",
+              "ToolTip": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Views\\Product\\ProductDetails.cshtml",
+              "RelativeToolTip": "Views\\Product\\ProductDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T20:00:51.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Demo_Lec1",
+              "DocumentMoniker": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Demo_Lec1.csproj",
+              "RelativeDocumentMoniker": "Demo_Lec1.csproj",
+              "ToolTip": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Demo_Lec1.csproj",
+              "RelativeToolTip": "Demo_Lec1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-11T06:53:37.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Work\\dotNET\\MVC\\Demo\\Demo_Lec1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T11:12:16.682Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

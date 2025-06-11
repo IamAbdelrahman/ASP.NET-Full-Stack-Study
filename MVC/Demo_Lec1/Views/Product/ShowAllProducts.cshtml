@@ -1,0 +1,24 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>View Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in @Model)
+        {
+            <tr>
+                <td> <img src="~/images/@product.Image" style="width:100px" /> </td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                <td> <a href="/product/ProductDetails/@product.Id">Show Details</a> </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
