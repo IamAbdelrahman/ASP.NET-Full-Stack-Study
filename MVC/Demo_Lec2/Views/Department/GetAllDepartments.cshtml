@@ -1,0 +1,28 @@
+﻿@model List<Department>
+@{
+    ViewData["Title"] = "GetAllDepartments";
+}
+
+<h1>GetAllDepartments</h1>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Department ID</th>
+            <th>Department Name</th>
+            <th>Manager Name</th>
+            <th>Number of Employees</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model)
+        {
+            <tr>
+                <td>@department.ID</td>
+                <td>@department.Name</td>
+                <td>@department.ManagerName</td>
+                <td>@department.Employees.Count</td>
+            </tr>
+        }
+    </tbody>
+
