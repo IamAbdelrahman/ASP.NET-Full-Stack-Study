@@ -1,0 +1,22 @@
+﻿@model TraineeVM
+
+<h1>GetResult</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Trainee Name</th>
+			<th>Course Name</th>
+			<th>Degree</th>
+			<th>State</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>@Model.TraineeName</td>
+			<td>@Model.CourseName</td>
+			<td><span style="color:@Model.Color">@Model.TraineeDegree</span></td>
+			<td>@Model.State</td>
+		</tr>
+	</tbody>
+

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "ShowAllInstructors";
+}
+
+<h1>ShowAllInstructors</h1>
+
+@model List<Instructor>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Instructor ID</th>
+            <th>Instructor Name</th>
+            <th>Instructor Address</th>
+            <th>Enrolled Department</th>
+            <th>Enrolled Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var instructor in Model)
+        {
+            <tr>
+                <td>@instructor.ID</td>
+                <td>@instructor.Name</td>
+                <td>@instructor.Address</td>
+                <td>@instructor.Department?.Name</td>  
+                <td>@instructor.Course?.Name</td>      
+            </tr>
+        }
+    </tbody>
