@@ -1,0 +1,14 @@
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\obj\Debug\net8.0\LINQ_Demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\obj\Debug\net8.0\LINQ_Demo.AssemblyInfoInputs.cache
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\obj\Debug\net8.0\LINQ_Demo.AssemblyInfo.cs
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\obj\Debug\net8.0\LINQ_Demo.csproj.CoreCompileInputs.cache
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\bin\Debug\net8.0\LINQ_Demo.exe
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\bin\Debug\net8.0\LINQ_Demo.deps.json
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\bin\Debug\net8.0\LINQ_Demo.runtimeconfig.json
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\bin\Debug\net8.0\LINQ_Demo.dll
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\bin\Debug\net8.0\LINQ_Demo.pdb
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\obj\Debug\net8.0\LINQ_Demo.dll
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\obj\Debug\net8.0\refint\LINQ_Demo.dll
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\obj\Debug\net8.0\LINQ_Demo.pdb
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\obj\Debug\net8.0\LINQ_Demo.genruntimeconfig.cache
+C:\Work\dotNET\LINQ\ITI-Demo\LINQ_Demo\obj\Debug\net8.0\ref\LINQ_Demo.dll
