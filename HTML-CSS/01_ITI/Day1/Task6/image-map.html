@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Map Example</title>
+</head>
+<body>
+
+  <h2>Image Map Example</h2>
+  <p>Click on the laptop, phone, or coffee cup in the image:</p>
+
+  <!-- First Image with Rect & Circle -->
+  <img src="https://www.w3schools.com/html/workplace.jpg" 
+       alt="Workplace" 
+       usemap="#workmap" 
+       width="400" 
+       height="379">
+
+  <map name="workmap">
+    <area shape="rect" coords="34,44,270,350" 
+          href="https://en.wikipedia.org/wiki/Laptop" 
+          alt="Laptop" target="_blank">
+
+    <area shape="rect" coords="290,172,333,250" 
+          href="https://en.wikipedia.org/wiki/Smartphone" 
+          alt="Phone" target="_blank">
+
+    <area shape="circle" coords="337,300,44" 
+          href="https://en.wikipedia.org/wiki/Coffee" 
+          alt="Coffee" target="_blank">
+  </map>
+
+  <hr>
+
+  <h2>Image Map with Polygon Example</h2>
+  <p>Click on the star shape below:</p>
+
+  <!-- Second Image with Polygon (New star image) -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Gold_Star.svg" 
+       alt="Star" 
+       width="300"
+       usemap="#starmap">
+
+  <map name="starmap">
+    <!-- Polygon (points of the star) -->
+    <area shape="poly" 
+          coords="150,25,179,111,269,111,197,165,
+                  223,251,150,200,77,251,103,165,
+                  31,111,121,111" 
+          href="https://en.wikipedia.org/wiki/Star" 
+          alt="Star" target="_blank">
+  </map>
+
+</body>
+</html>
