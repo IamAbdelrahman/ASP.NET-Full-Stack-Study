@@ -1,0 +1,34 @@
+/* Any Element With Class Title */
+/* .title { } */
+
+/* Any Element With Id nav*/
+/* #nav {} */
+
+/* Any div tag */
+/* div {} */
+
+/* Any h2 element (tag) */
+/* h2 {} */
+
+/* Ok */
+/* ._user-name {} */
+
+/* Ok */
+/* .-user-name {} */
+
+/* Not Ok */
+/* .1user-name {} */
+
+/* Not Ok */
+/* .@user-name {} */
+
+/* ? */
+/* .user@name {} */
+
+/* Ok */
+/* ._user10name {
+} */
+
+/* Ok */
+/* .u {
+} */
