@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+      /* Code One
+      This code will throw an error because the script is executed before the DOM is fully loaded.
+      */
+      document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+      /* Code Two
+        This code will work because it waits for the window to load before executing.
+      */
+      window.onload = function () {
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+    <div id="el2">
+        
+    </div>
+    <script>
+      /* Code Three
+        This code will work because it is placed after the element in the body.
+      */
+      document.getElementById("el").style.color = "red";
+    </script>
+  </body>
+  <script src="main.js"></script>
+</html>
