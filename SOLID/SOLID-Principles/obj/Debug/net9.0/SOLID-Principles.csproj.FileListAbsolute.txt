@@ -1,0 +1,15 @@
+D:\Work\MY_REPO\SOLID\SOLID-Principles\bin\Debug\net9.0\SOLID-Principles.exe
+D:\Work\MY_REPO\SOLID\SOLID-Principles\bin\Debug\net9.0\SOLID-Principles.deps.json
+D:\Work\MY_REPO\SOLID\SOLID-Principles\bin\Debug\net9.0\SOLID-Principles.runtimeconfig.json
+D:\Work\MY_REPO\SOLID\SOLID-Principles\bin\Debug\net9.0\SOLID-Principles.dll
+D:\Work\MY_REPO\SOLID\SOLID-Principles\bin\Debug\net9.0\SOLID-Principles.pdb
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\SOLID-Principles.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\SOLID-Principles.AssemblyInfoInputs.cache
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\SOLID-Principles.AssemblyInfo.cs
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\SOLID-Principles.csproj.CoreCompileInputs.cache
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\SOLID-Principles.sourcelink.json
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\SOLID-Principles.dll
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\refint\SOLID-Principles.dll
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\SOLID-Principles.pdb
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\SOLID-Principles.genruntimeconfig.cache
+D:\Work\MY_REPO\SOLID\SOLID-Principles\obj\Debug\net9.0\ref\SOLID-Principles.dll
