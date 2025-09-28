@@ -1,0 +1,138 @@
+.assign-1-shape-1{
+    width: 500px;
+    background-color: blueviolet;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.assign-1-shape-2{
+    width: 500px;
+    background-color: blueviolet;
+    opacity: 50%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.assign-1-shape-3{
+    width: 500px;
+    background-color: blueviolet;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    opacity: 10%;
+}
+
+.assign-2-shape-1{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: no-repeat;
+    background-color: lightblue;
+}
+
+.assign-2-shape-2{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: repeat-x;
+}
+
+.assign-2-shape-3{
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+    background-image: url(t3.jpg);
+    background-repeat: repeat-y;
+}
+
+.assign-2-shape-4{
+    margin-top: 20px;
+    width: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.assign-3-shape-1{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-color: lightblue;
+}
+
+.assign-3-shape-2{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: repeat-y;
+    background-position: right;
+    background-color: lightblue;
+}
+
+.assign-3-shape-3{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-color: lightblue;
+}
+
+.assign-3-shape-4{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: repeat;
+    background-color: lightblue;
+}
+
+.assign-4-shape-1{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: no-repeat;
+    background-color: red;
+    background-size: 80%;
+}
+
+.assign-4-shape-2{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: no-repeat;
+    background-color: red;
+    background-size: cover;
+}
+
+.assign-4-shape-3{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: no-repeat;
+    background-color: red;
+    background-size: contain;
+}
+
+.assign-4-shape-3{
+    margin-top: 20px;
+    width: 800px;
+    height: 800px;
+    background-image: url(t3.jpg);
+    background-repeat: no-repeat;
+    background-color: red;
+    background-size: 50%;
+    background-position: bottom right;
+}
