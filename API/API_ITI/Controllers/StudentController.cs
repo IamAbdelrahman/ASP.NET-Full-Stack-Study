@@ -1,10 +1,13 @@
 ﻿using Demos.DTO;
 using Demos.Models;
+using Demos.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace Demos.Controllers
 {
@@ -15,56 +18,37 @@ namespace Demos.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        ITIContext db;
-        public StudentController(ITIContext db)
+        private readonly IUnitOfWork _unitOfWork;
+        public StudentController(IUnitOfWork unitOfWork)
         {
-            this.db = db;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            List<Student> st = db.Students.ToList();
-            List<StudentDTO> stDTOs = new List<StudentDTO>();
-            foreach (var student in st)
+            var students = await _unitOfWork.Students.GetAllAsync();
+            var studentDTOs = students.Select(s => new StudentDTO
             {
-                stDTOs.Add(new StudentDTO
-                {
-                    Id = student.Id,
-                    FullName = student.FullName.ToLower(),
-                    Address = student.Address, // Assuming Department has an Address property
-                    Age = student.Age + 1 ?? 0, // Assuming Age is nullable, default to 0 if null
-                    DepartmentName = student.Department?.Name // Assuming Department has a Name property
-                });
-            }
-            return Ok(stDTOs); // Returns 200 OK with the list of students
+                Id = s.Id,
+                FullName = s.FullName.ToLower(),
+                Address = s.Address, // Assuming Department has an Address property
+                Age = s.Age + 1 ?? 0, // Assuming Age is nullable, default to 0 if null
+                DepartmentName = s.Department?.Name // Assuming Department has a Name property
+            });
+
+            return Ok(studentDTOs); // Returns 200 OK with the list of students
         }
 
-        /// <summary>
-        /// Here we can only control the HTTP method and the route.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        //[HttpGet("{id}")]
-        //public Student? GetById(int id)
-        //{
-        //    return db.Students.Find(id);
-        //}
-
-        /// <summary>
-        /// Here we can control the HTTP method, the route, and the response status code.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetById(int id)
         {
-            var student = db.Students.Find(id);
+            var student = await _unitOfWork.Students.GetByIdAsync(id);
             if (student == null)
             {
-                return NotFound(); // Returns 404 Not Found
+                return NotFound(); // Returns 404 Not Found if the student does not exist
             }
-            StudentDTO stDTO = new StudentDTO
+            var studentDTO = new StudentDTO
             {
                 Id = student.Id,
                 FullName = student.FullName,
@@ -72,30 +56,35 @@ namespace Demos.Controllers
                 Age = student.Age ?? 0, // Assuming Age is nullable, default to 0 if null
                 DepartmentName = student.Department?.Name // Assuming Department has a Name property
             };
-            return Ok(stDTO); // Returns 200 OK with the student data
+            return Ok(studentDTO); // Returns 200 OK with the student details
         }
 
-        //[HttpGet("/api/sts/{name}")]
-        [HttpGet("{name:alpha}")] // Add constraints on the route parameter
-        public IActionResult GetByName(string name)
+        [HttpGet("{name}")]
+        public async Task<IActionResult> GetByName(string name)
         {
-            var student = db.Students.FirstOrDefault(s => s.FullName == name);
+            var student = await _unitOfWork.Students.GetStudentByName(name);
             if (student == null)
             {
                 return NotFound(); // Returns 404 Not Found
             }
-            return Ok(student); // Returns 200 OK with the student data
+            var studentDTO = new StudentDTO
+            {
+                Id = student.Id,
+                FullName = student.FullName,
+                Address = student.Address, // Assuming Department has an Address property
+                Age = student.Age ?? 0, // Assuming Age is nullable, default to 0 if null
+                DepartmentName = student.Department?.Name // Assuming Department has a Name property
+            };
+            return Ok(studentDTO); // Returns 200 OK with the student data
         }
 
         [HttpPost]
-        public IActionResult Add(Student? student)
+        public async Task<IActionResult> Add(Student? student)
         {
             if (student == null) return BadRequest("Student data is required.");
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            db.Students.Add(student);         // <--- Save to DbContext
-            db.SaveChanges();                 // <--- Actually save to DB
-            //return Created("Anything", student); // Returns 201 Created with the student data
-
+            await _unitOfWork.Students.AddAsync(student);
+            await _unitOfWork.CompleteAsync();
             /* 
              * The CreatedAtAction method generates a response with a 201 Created status code
               and includes a Location header pointing to the GetById action for the newly created student.
@@ -108,23 +97,22 @@ namespace Demos.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(Student student, int id)
+        public async Task<IActionResult> Update(Student student, int id)
         {
             if (student == null) return BadRequest("Student data is required.");
             if (student.Id != id) return BadRequest("Student ID mismatch.");
-            db.Students.Update(student);
-            //db.Entry(student).State = EntityState.Modified; // Mark the entity as modified
-            db.SaveChanges(); // Save changes to the database
+            await _unitOfWork.Students.UpdateAsync(student);
+            await _unitOfWork.CompleteAsync();
             return Content("student updated successfully");
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var student = db.Students.Find(id);
+            var student = await _unitOfWork.Students.GetByIdAsync(id);
             if (student == null) return NotFound("Student not found.");
-            db.Students.Remove(student);
-            db.SaveChanges();
+            await _unitOfWork.Students.DeleteAsync(id);
+            await _unitOfWork.CompleteAsync();
             return Ok($"Student {student} deleted successfully.");
         }
     }

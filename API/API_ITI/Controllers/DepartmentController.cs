@@ -1,5 +1,6 @@
 ﻿using Demos.DTO;
 using Demos.Models;
+using Demos.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,16 +10,16 @@ namespace Demos.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-        ITIContext db;
-        public DepartmentController(ITIContext db)
+        private readonly IUnitOfWork _unitOfWork;
+        public DepartmentController(IUnitOfWork unitOfWork)
         {
-            this.db = db;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var departments = db.Departments.ToList();
+            var departments = await _unitOfWork.Departments.GetAllAsync();
             var departmentDTOs = departments.Select(d => new DepartmentDTO
             {
                 Id = d.Id,
@@ -31,9 +32,9 @@ namespace Demos.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var department = db.Departments.Find(id);
+            var department = await _unitOfWork.Departments.GetByIdAsync(id);
             if (department == null)
             {
                 return NotFound(); // Returns 404 Not Found if the department does not exist

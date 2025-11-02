@@ -1,5 +1,7 @@
 
+using Demos.Middlewares;
 using Demos.Models;
+using Demos.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace Demos
@@ -24,6 +26,7 @@ namespace Demos
             builder.Services.AddControllers().AddNewtonsoftJson(x => 
                 x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -32,6 +35,8 @@ namespace Demos
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseMiddleware<RateLimitingMiddleware>();
+            app.UseMiddleware<ProfilingMiddleware>();
 
             app.UseHttpsRedirection();
 
