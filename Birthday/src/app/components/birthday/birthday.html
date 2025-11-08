@@ -1,0 +1,134 @@
+<div class="birthday-container" [@fadeInUp]>
+  <!-- Confetti Container -->
+  <div class="confetti-container" [class.active]="isConfettiActive"></div>
+
+  <!-- Header Section -->
+  <header class="birthday-header">
+    <div class="birthday-decoration">🎈</div>
+    <h1 class="birthday-title">
+      Happy Birthday, <span class="name-highlight">{{ friendName }}</span>!
+    </h1>
+    <p class="birthday-subtitle">Celebrating you today and always! 🎉</p>
+    <div class="birthday-decoration">🎈</div>
+  </header>
+
+  <!-- Surprise Button -->
+  <div class="surprise-section">
+    <button 
+      class="surprise-button" 
+      (click)="triggerSurprise()"
+      aria-label="Trigger birthday surprise">
+      <span class="button-icon">🎊</span>
+      Click for a Surprise!
+      <span class="button-icon">🎊</span>
+    </button>
+  </div>
+
+
+<!-- Video Section -->
+<section class="video-section">
+  <div class="video-card">
+    <div class="video-wrapper">
+      <video 
+        #videoPlayer
+        [src]="video.src"
+        [poster]="video.thumbnail"
+        controls
+        controlsList="nodownload"
+        class="video-player"
+        [attr.aria-label]="video.title">
+        Your browser does not support the video tag.
+      </video>
+      <div class="play-overlay">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+      </div>
+    </div>
+    <div class="video-info">
+      <h3 class="video-title">{{ video.title }}</h3>
+      <p class="video-description">{{ video.description }}</p>
+    </div>
+  </div>
+</section>
+  
+  <!-- Photo Grid -->
+  <section class="photo-grid">
+    <article 
+      *ngFor="let photo of photos; let i = index" 
+      class="photo-card"
+      (click)="openLightbox(photo, i)"
+      (keydown.enter)="openLightbox(photo, i)"
+      (keydown.space)="openLightbox(photo, i); $event.preventDefault()"
+      tabindex="0"
+      role="button"
+      [attr.aria-label]="'View ' + photo.caption">
+      <div class="photo-wrapper">
+        <img 
+          [src]="photo.src" 
+          [alt]="photo.alt"
+          class="photo-image"
+          loading="lazy">
+        <div class="photo-overlay">
+          <span class="view-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="photo-caption">
+        <svg class="heart-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        {{ photo.caption }}
+      </div>
+    </article>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div 
+    *ngIf="selectedPhoto" 
+    class="lightbox-overlay"
+    (click)="closeLightbox()"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image viewer">
+    <button 
+      class="lightbox-close"
+      (click)="closeLightbox()"
+      aria-label="Close lightbox">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <button 
+      class="lightbox-nav lightbox-prev"
+      (click)="navigatePhoto('prev'); $event.stopPropagation()"
+      aria-label="Previous image">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <img 
+        [src]="selectedPhoto.src" 
+        [alt]="selectedPhoto.alt"
+        class="lightbox-image">
+      <p class="lightbox-caption">{{ selectedPhoto.caption }}</p>
+    </div>
+
+    <button 
+      class="lightbox-nav lightbox-next"
+      (click)="navigatePhoto('next'); $event.stopPropagation()"
+      aria-label="Next image">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+</div>
