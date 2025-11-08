@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { Footer } from './components/footer/footer';
-import { Product } from "./components/product/product";
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from "./components/navbar/navbar.component";
+import { Birthday } from './components/birthday/birthday';
 // import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [Footer, FormsModule, NavbarComponent, Product],
+  imports: [FormsModule, Birthday, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
